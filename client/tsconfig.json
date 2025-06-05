@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",  // Aqui, 'src' é o diretório base
+    "paths": {
+      "@/*": ["*"]
+    },
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
