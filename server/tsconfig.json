@@ -1,22 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "baseUrl": "./src",
-    "paths": {
-      "*": ["node_modules/*"]
-    }
+    "target": "ESNext",                      // Mantém a versão mais recente do ECMAScript
+    "module": "commonjs",                     // Usa o CommonJS como módulo
+    "moduleResolution": "node",               // Resolução de módulos conforme o padrão Node.js
+    "esModuleInterop": true,                  // Interoperabilidade de módulos ES
+    "strict": true,                           // Ativa a verificação rigorosa de tipos
+    "skipLibCheck": true,                     // Ignora checagem de tipo em bibliotecas
+    "forceConsistentCasingInFileNames": true, // Força consistência no uso de maiúsculas e minúsculas nos nomes de arquivos
+    "outDir": "./dist",                       // Define o diretório de saída para os arquivos compilados
+    "baseUrl": "./src",                       // Define a pasta base para importações
+    "rootDir": "./src",                       // Define o diretório raiz do código fonte
+    "experimentalDecorators": true,           // Habilita o uso de decoradores
+    "emitDecoratorMetadata": true            // Habilita a emissão de metadados dos decoradores
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts"                             // Inclui todos os arquivos TypeScript dentro da pasta src
   ],
   "exclude": [
-    "node_modules"
+    "node_modules"                            // Exclui a pasta node_modules da compilação
   ]
 }

@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",  // Aqui, 'src' é o diretório base
-    "paths": {
-      "@/*": ["*"]
-    },
-    "strict": true,
+    "target": "ES6",
+    "module": "commonjs",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "module": "esnext",
-    "target": "esnext",
-    "jsx": "react-jsx"
+    "forceConsistentCasingInFileNames": true,  // Garantir que o TypeScript seja sensível a maiúsculas e minúsculas
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["node_modules/*", "../server/src/*"]
+    }
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

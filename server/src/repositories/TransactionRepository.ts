@@ -1,23 +1,15 @@
-import { EntityRepository, Repository } from "typeorm";
+import { getRepository } from "typeorm";
 import { Transaction } from "../entities/Transaction";
 
-@EntityRepository(Transaction)
-export class TransactionRepository extends Repository<Transaction> {
-  async findByMonthAndYear(month: number, year: number): Promise<Transaction[]> {
-    return this.createQueryBuilder("transaction")
-      .where("EXTRACT(MONTH FROM transaction.date) = :month", { month })
-      .andWhere("EXTRACT(YEAR FROM transaction.date) = :year", { year })
-      .orderBy("transaction.date", "ASC")
-      .getMany();
+export class TransactionRepository {
+  private transactionRepo = getRepository(Transaction);
+
+  async createTransaction(data: Partial<Transaction>) {
+    const transaction = this.transactionRepo.create(data);
+    return await this.transactionRepo.save(transaction);
   }
 
-  async findAllGroupedByMonth(): Promise<{ month: number; year: number }[]> {
-    return this.createQueryBuilder("transaction")
-      .select("EXTRACT(MONTH FROM transaction.date) as month")
-      .addSelect("EXTRACT(YEAR FROM transaction.date) as year")
-      .groupBy("month, year")
-      .orderBy("year", "ASC")
-      .addOrderBy("month", "ASC")
-      .getRawMany();
+  async getAllTransactions() {
+    return this.transactionRepo.find();
   }
 }

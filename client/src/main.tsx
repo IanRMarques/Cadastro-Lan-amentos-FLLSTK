@@ -1,12 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+// src/main.tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';  // Referência para o componente App
+import './index.css';     // Arquivo de estilo global
 
-// Add React Query for better data fetching
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -14,4 +14,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <App />
     </QueryClientProvider>
   </React.StrictMode>
-)
+);

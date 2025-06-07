@@ -1,38 +1,22 @@
 import express from "express";
-import "reflect-metadata";
+import dotenv from "dotenv";
 import { createConnection } from "typeorm";
-import { createTransactionRoutes } from "./routes/transactionRoutes";
-import cors from "cors";
-import helmet from "helmet";
-import morgan from "morgan";
+import transactionRoutes from "./routes/transactionRoutes";
+import dbConfig from "./config/database";
+
+dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
-app.use(helmet());
-app.use(morgan("combined"));
 app.use(express.json());
+app.use("/api", transactionRoutes);
 
-// Database connection
-createConnection()
+createConnection(dbConfig)
   .then(() => {
-    console.log("Database connected");
-
-    // Routes
-    app.use("/api", createTransactionRoutes());
-
-    // Error handling
-    app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
-      console.error(err.stack);
-      res.status(500).json({ error: "Something went wrong!" });
-    });
-
-    const PORT = process.env.PORT || 3001;
-    app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-    });
+    console.log("Conectado ao banco de dados");
   })
-  .catch((error) => console.log("TypeORM connection error: ", error));
+  .catch((error) => {
+    console.error("Erro ao conectar ao banco de dados", error);
+  });
 
 export default app;

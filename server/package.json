@@ -18,8 +18,8 @@
     "morgan": "^1.10.0",
     "pg": "^8.11.3",
     "react-hot-toast": "^2.5.2",
-    "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.3.17"
+    "reflect-metadata": "^0.1.14",
+    "typeorm": "^0.3.24"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
