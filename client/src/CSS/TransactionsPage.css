@@ -1,0 +1,80 @@
+/* Define a largura total da tabela para que ela ocupe toda a largura da tela */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove o espaço entre as células */
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+/* Estilo para o cabeçalho da tabela */
+th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Estilo para as células da tabela */
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para o corpo da tabela */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Linhas alternadas com fundo cinza claro */
+}
+
+/* Estilo ao passar o mouse sobre as linhas da tabela */
+tbody tr:hover {
+  background-color: #ddd; /* Destaque quando o mouse passar por cima */
+}
+
+/* Estilo para o título */
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para o formulário de inserção de transações */
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select, form button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Estilo para o botão do formulário */
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para as linhas do resumo */
+.summary-row {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.summary-row td {
+  text-align: right;
+  padding-right: 20px;
+}

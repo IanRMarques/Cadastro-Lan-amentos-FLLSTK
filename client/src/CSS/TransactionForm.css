@@ -1,0 +1,83 @@
+/* Container do Formulário */
+form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do Formulário */
+form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilos para os campos de entrada (inputs e select) */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Estilo dos labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Estilo dos inputs e select */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Foco nos inputs e select */
+.form-input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Estilo para o botão de submissão */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.submit-btn:hover {
+  background-color: #388e3c;
+}
+
+/* Estilo para o campo de erro (se houver) */
+.error-message {
+  color: #d32f2f;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+.form-input {
+  width: 100% !important; /* Adicionando !important para garantir que o estilo seja aplicado */
+  padding: 10px !important;
+  margin-top: 5px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  color: #333 !important;
+}
+

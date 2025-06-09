@@ -1,0 +1,125 @@
+/* Reseta margens e padding de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estilo para o título da página */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a90e2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Formulário */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input[type="number"],
+select {
+  width: 48%;
+  display: inline-block;
+}
+
+input[type="date"] {
+  width: 48%;
+  display: inline-block;
+  margin-right: 4%;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #357ab7;
+}
+
+button:active {
+  background-color: #2d689b;
+}
+
+/* Estilo para a tabela de transações */
+table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f7fa;
+  color: #4a90e2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e6f0ff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  input[type="number"],
+  select {
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
